@@ -1,7 +1,15 @@
 
 # Inicializando biblioteca
-import pyttsx3
 import re
+from playsound import playsound
+import requests
+import winsound
+
+
+
+
+
+i = 0
 def remove_special_characters(text):
     # Expressão regular para encontrar caracteres especiais
     pattern = r'[^a-zA-Z0-9\sáéíóúâêîôûàèìòùãẽĩõũç,.!?-]'  # Irá manter letras com acentos, números, espaços e pontuações
@@ -11,17 +19,21 @@ def remove_special_characters(text):
 
     return clean_text
 
-def main(string):
-  nstring = remove_special_characters(string)
-  speaker=pyttsx3.init()
 
-#   Definindo atributos:
-#    Lingua: portugues do Brasil
-#    Velocidade: padrao (200) -45
-  speaker.setProperty('voice', 'brazil')
-  rate = speaker.getProperty('rate')
-  speaker.setProperty('rate', rate+50)
+def main(mystring):
+    global i
+    mystring = remove_special_characters(mystring)
+    # Use the public URL from the ngrok output
+    colab_url = 'https://40ca-34-124-133-182.ngrok-free.app/run'
 
-# Passando texto a ser dito e executando
-  speaker.say(nstring)
-  speaker.runAndWait()
+    data = {'input': mystring}  # Example input string
+    response = requests.post(colab_url, json=data)
+
+    # Save the wav file
+    with open(f'output{i}.wav', 'wb') as f:
+        f.write(response.content)
+
+
+    filename = f'output{i}.wav'
+    winsound.PlaySound(filename, winsound.SND_FILENAME)
+    i += 1

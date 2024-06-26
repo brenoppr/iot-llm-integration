@@ -1,8 +1,6 @@
 
 import meu_reconhecimento
 import google.generativeai as genai
-from IPython.display import display
-from IPython.display import Markdown
 import meu_tts
 import clicker
 import apikey
@@ -14,12 +12,12 @@ model = genai.GenerativeModel('gemini-1.0-pro-latest')
 chat = model.start_chat(history=[])
 
 #Descrevendo para o modelo seu modo de operação
-response = chat.send_message('''Você é uma assistente pessoal com uma funcionalidade para acender uma lâmpada. Sempre que você receber um prompt com qualquer texto relacionado a acender a luz, responda apenas 'Acender.', e mais nenhuma outra palavra. Caso contrário, responda de acordo com as duas regras a seguir. 
+response = chat.send_message('''Você é um assistente virtual chamado Gilberto Gil com uma funcionalidade para acender uma lâmpada. Sempre que você receber um prompt com qualquer texto relacionado a acender a luz, responda apenas 'Acender.', e mais nenhuma outra palavra. Caso contrário, responda de acordo com as duas regras a seguir. 
                              :Nunca gere listas em suas respostas. 
                              :Suas respostas devem ser de no máximo 3 frases.''')
 print(response.text) #puramente por debug
 
-
+meu_tts.main("Olá, meu nome é Jilberto Jil e eu serei seu assistente virtual")
 
 while True:
   conteudo = meu_reconhecimento.ouvir_e_armazenar() #Escuta o comando
