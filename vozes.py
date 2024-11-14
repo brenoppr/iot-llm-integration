@@ -1,0 +1,10 @@
+murilo = "O neodímio, elemento chave na química e tecnicologia moderna, é um metal de transição fascinante. Com o símbolo Nd e N° 60, ele faz parte do grupo das terras raras na tabela periódica. Sua propriedade mais notável é a sua extraordinária capacidade magnética."
+natan = "Os metais de transição interna são compostos por 30 elementos da tabela periódica, que normalmente são colocados do lado de fora. São divididos entre lantanídeos e actinídeos. Com exceção do Lutece e do Laurensio,"
+vinicius = "O Gadolini possui uma aplicação muito importante na computação, devido ao seu comportamento sobre efeito de campos magnéticos. Ele é usado no memória RAM do tipo M-RAM, que é rápida e eficiente em termos de energia."
+breno = "Então gostaria de começar falando um pouco sobre o mercado desses assistentes virtuais. A empresa Mordor Intelligence, que é uma empresa de avaliação de mercado, estimou o valor de mercado desses assistentes virtuais em 2024"
+ricardo = "A introdução do VAR, árbitro de vídeo, no futebol, trouxe consigo uma série de mudanças no modo como o esporte é vivenciado e celebrado. Embora a tecnologia tenha sido implementada com o objetivo de trazer decisões mais justas e precisas..."
+murilofile = 'sounds/MuriloCut.wav'
+brenofile = 'sounds/BrenoCut.wav'
+natanfile = 'sounds/NatanCut.wav'
+ricardofile = 'sounds/RicardoCut.wav'
+viniciusfile = 'sounds/ViniciusCut.wav'
